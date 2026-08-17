@@ -1,0 +1,12 @@
+services:
+  legalserver_microsoft:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/workspace:cached
+    working_dir: /workspace
+    command: python -m legalserver_microsoft
+    user: vscode

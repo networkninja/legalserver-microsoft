@@ -1,0 +1,6 @@
+black==26.5.1
+bandit==1.9.4
+mypy==1.18.2
+pre-commit==4.3.0
+types-requests==2.32.4.20250913
+types-setuptools==80.9.0.20250822

@@ -1,4 +1,4 @@
-# LegalServer Microsoft Integration Tool
+# LegalServer SharePoint Integration Tool
 
 `legalserver_microsoft` is a Python Command Line Interface (CLI) for setting up
 and maintaining the Microsoft Azure elements required for LegalServer's
@@ -7,6 +7,10 @@ SharePoint integration and LegalServer's Azure Single Sign On (SSO).
 It is designed to guide an operator through certificate generation, Azure app
 registration setup, certificate rotation, and integration handoff reporting
 without requiring them to work through each Azure step manually.
+
+The Azure OpenAI setup script configures endpoints for LegalServer's AI
+integration. There is a separate detailed Readme file for the Azure OpenAI setup
+script in the `azure_openai/` directory.
 
 ## What This Package Does
 
@@ -17,6 +21,7 @@ This package helps you:
 - rotate certificates on existing SharePoint integration app registrations
 - create and update the LegalServer SSO Azure app registration
 - validate an existing selected-sites helper app for SharePoint site access
+- setup and audit Microsoft Azure OpenAI endpoints and model deployments for LegalServer ML features
 - produce operator reports with masked persisted secrets and follow-up details
 
 This package does not manage SharePoint content, LegalServer application data,
@@ -25,6 +30,7 @@ or unrelated Azure resources.
 ## Repository Layout
 
 - `legalserver_microsoft/`: Python package and CLI workflows
+- `azure_openai/`: Azure OpenAI discovery, quota audit, and model deployment automation tool (`Setup-LegalServerAzureOpenAI.ps1`)
 - `run-container.sh`: one-shot container launcher for Bash shells
 - `run-container.ps1`: one-shot container launcher for PowerShell
 - `run-container-reuse.sh`: reusable container shell launcher for Bash shells

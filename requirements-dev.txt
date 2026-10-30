@@ -1,4 +1,4 @@
-black==26.5.1
+black==26.10.1
 bandit==1.9.4
 mypy==1.18.2
 pre-commit==4.3.0
